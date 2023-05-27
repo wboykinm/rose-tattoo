@@ -46,6 +46,7 @@
 </head>
 <body>
   <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="locations.js"></script>
   <script>
   
   // set constants
@@ -130,32 +131,7 @@
     .attr("cy", height/2)
     .attr("r", 242);
   // build the toposcope locations
-  var locations = [
-    {
-      name: 'middlebury',
-      bearing: 238
-    },
-    {
-      name: 'vuelta larga',
-      bearing: 175 
-    },
-    {
-      name: 'boston',
-      bearing: 162
-    },
-    {
-      name: 'harwichport',
-      bearing: 152
-    },
-    {
-      name: 'mont albert',
-      bearing: 40
-    },
-    { 
-      name: 'central city',
-      bearing: 270
-    }
-  ]
+  
   for (var i = 0; i < locations.length; i++) {
     var outerRadius = 227
     var rads = (locations[i].bearing - 90) * Math.PI / 180
